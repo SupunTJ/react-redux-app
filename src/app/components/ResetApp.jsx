@@ -1,19 +1,20 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import { resetCounter } from "../../redux/slice/counterSlice";
+// import { resetCounter } from "../../redux/slice/counterSlice";
 import { resetDestination } from "../../redux/slice/destinationSlice";
+import { resetReduxApp } from "../../redux/action/actions";
 
 function ResetApp() {
   const dispatch = useDispatch();
   const resetCounterAndDestination = () => {
-    dispatch(resetDestination());
-    dispatch(resetCounter());
+    dispatch(resetReduxApp());
+    // dispatch(resetCounter());
   };
   return (
     <div className="text-center">
       <button
         className="btn btn-warning"
-        onClick={() => dispatch(resetCounterAndDestination)}
+        onClick={() => dispatch(resetReduxApp())}
       >
         Reset App
       </button>
