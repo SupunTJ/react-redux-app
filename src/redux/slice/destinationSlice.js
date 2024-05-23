@@ -38,7 +38,7 @@ export const destinationSlice = createSlice({
       // console.log(action);
     },
     resetDestination: (state, action) => {
-      console.log(action);
+      // console.log(action);
       state.destinationSelected = null;
     },
   },
